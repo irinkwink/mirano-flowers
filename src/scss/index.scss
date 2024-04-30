@@ -1,6 +1,2 @@
-@use "./variables" as *;
-
-body {
-  background-color: $color-bg;
-	color: $color-text;
-}
+@use "./base" as *;
+@use "./fonts" as *;
