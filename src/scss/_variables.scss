@@ -3,7 +3,7 @@
   --color-green: #607900;
   --color-orange: #d17d2f;
   --color-white: #fff;
-  --color-light-orange: #f0a35b;
+  --color-orange-light: #f0a35b;
   --color-footer: #e9ece0;
   --color-bg: #f5f6f2;
   --color-pattern: #f4f8eb;
@@ -12,6 +12,10 @@
 
   --container-max-width: 1300px;
   --container-padding-x: 27px;
+  --container-padding-x-mobile: 64px;
+  --container-padding-x-mobile-s: 14px;
 
   --icon-arrow-size: 20px;
+
+  --transition-duration: 0.3s;
 }

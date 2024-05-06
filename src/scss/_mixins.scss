@@ -1,5 +1,31 @@
+@use "./media" as *;
+
 @mixin fluid-text($max: 48, $min: 16) {
   font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+}
+
+@mixin fluid-text-desktop($max: 48, $min: 16) {
+  font-size: clamp(
+    #{$min}px,
+    calc(#{$min}px + ($max - $min) * (100vw - 1024px) / (1440 - 1024)),
+    #{$max}px
+  );
+}
+
+@mixin fluid-text-tablet($max: 48, $min: 16) {
+  font-size: clamp(
+    #{$min}px,
+    calc(#{$min}px + ($max - $min) * (100vw - 768px) / (1024 - 768)),
+    #{$max}px
+  );
+}
+
+@mixin fluid-text-mobile($max: 48, $min: 16) {
+  font-size: clamp(
+    #{$min}px,
+    calc(#{$min}px + ($max - $min) * (100vw - 320px) / (768 - 320)),
+    #{$max}px
+  );
 }
 
 @mixin reset-link {

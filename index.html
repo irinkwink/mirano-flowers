@@ -37,7 +37,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container header__container">
         <form class="header__form" action="">
           <input
             class="header__input"
@@ -61,10 +61,50 @@
           loading="lazy"
         />
 
-        <button class="header__cart-button">0</button>
+        <button class="header__cart-button">
+          <svg class="icon">
+            <use href="#icon-cart" />
+          </svg>
+          <span class="header__cart-button-counter">0</span>
+        </button>
       </div>
     </header>
-    <main></main>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__head-group">
+            <h1 class="hero__title">Авторские букеты</h1>
+            <p class="hero__subtitle">и подарки</p>
+          </div>
+          <figure class="hero__images">
+            <img
+              class="hero__image hero__image_left"
+              src="img/hero-left.jpg"
+              alt=""
+              width="284"
+              height="352"
+              loading="lazy"
+            />
+            <img
+              class="hero__image hero__image_center"
+              src="img/hero-center.jpg"
+              alt=""
+              width="680"
+              height="588"
+              loading="lazy"
+            />
+            <img
+              class="hero__image hero__image_right"
+              src="img/hero-right.jpg"
+              alt=""
+              width="284"
+              height="352"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+    </main>
     <footer></footer>
   </body>
 
@@ -79,5 +119,34 @@
         d="M13.3333 0.166626C13.3333 0.784959 13.9442 1.70829 14.5625 2.48329C15.3575 3.48329 16.3075 4.35579 17.3967 5.02163C18.2133 5.52079 19.2033 5.99996 20 5.99996M20 5.99996C19.2033 5.99996 18.2125 6.47913 17.3967 6.97829C16.3075 7.64496 15.3575 8.51746 14.5625 9.51579C13.9442 10.2916 13.3333 11.2166 13.3333 11.8333M20 5.99996L4.76837e-07 5.99996"
       />
     </symbol>
+    <symbol
+      id="icon-cart"
+      viewBox="0 0 28 28"
+      fill="none"
+      stroke="currentColor"
+    >
+      <g>
+        <path
+          d="M8.75 8.94834V7.81668C8.75 5.19168 10.8617 2.61334 13.4867 2.36834C16.6133 2.06501 19.25 4.52668 19.25 7.59501V9.20501"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M10.5 25.6666H17.5C22.19 25.6666 23.03 23.7883 23.275 21.5016L24.15 14.5016C24.465 11.655 23.6483 9.33331 18.6667 9.33331H9.33334C4.35168 9.33331 3.53501 11.655 3.85001 14.5016L4.72501 21.5016C4.97001 23.7883 5.81001 25.6666 10.5 25.6666Z"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
+    </symbol>
+  </svg>
+
+  <svg width="0" height="0" style="position: absolute">
+    <clipPath id="hero-clip-path" clipPathUnits="objectBoundingBox">
+      <path
+        d="M1,0.191 C1,0.235,0.961,0.275,0.896,0.307 C0.961,0.36,1,0.427,1,0.499 C1,0.572,0.96,0.639,0.893,0.692 C0.96,0.724,1,0.765,1,0.81 C1,0.915,0.776,1,0.5,1 C0.224,1,0,0.915,0,0.81 C0,0.765,0.04,0.724,0.107,0.692 C0.04,0.639,0,0.572,0,0.499 C0,0.427,0.039,0.36,0.104,0.307 C0.039,0.275,0,0.235,0,0.191 C0,0.086,0.224,0,0.5,0 C0.776,0,1,0.086,1,0.191"
+      />
+    </clipPath>
   </svg>
 </html>

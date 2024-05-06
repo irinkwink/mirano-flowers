@@ -1,9 +1,12 @@
 @use "./fonts" as *;
 @use "./variables" as *;
-@use "./mixins" as *;
 @use "./media" as *;
+@use "./mixins" as *;
 
 @forward "./utils";
 @forward "./base";
 
 @import "normalize.css";
+
+@import "./modules/header";
+@import "./modules/hero";
