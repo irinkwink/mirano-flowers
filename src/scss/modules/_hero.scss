@@ -65,7 +65,8 @@
     object-fit: cover;
 
     &_left {
-      border-radius: 400px 400px 400px 0;
+      border-radius: var(--border-radius-hero) var(--border-radius-hero)
+        var(--border-radius-hero) 0;
     }
 
     &_center {
@@ -75,7 +76,8 @@
     }
 
     &_right {
-      border-radius: 400px 0 400px 400px;
+      border-radius: var(--border-radius-hero) 0 var(--border-radius-hero)
+        var(--border-radius-hero);
     }
   }
 }

@@ -1,0 +1,22 @@
+.choices {
+  position: relative;
+
+  &__box {
+    position: absolute;
+    top: 43px;
+    padding: 24px;
+    border-radius: 12px;
+    background-color: var(--color-white);
+
+    &_price {
+      left: 50%;
+      translate: -50% 0;
+      display: none;
+    }
+
+    &_type {
+      right: 0;
+      display: none;
+    }
+  }
+}

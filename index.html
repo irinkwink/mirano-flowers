@@ -38,14 +38,18 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <form class="header__form" action="">
+        <form class="header__form form">
           <input
-            class="header__input"
+            class="form__input header__input"
             type="search"
             name="search"
             placeholder="Букет из роз"
           />
-          <button class="header__button" type="submit">
+          <button
+            class="form__button header__button"
+            type="submit"
+            aria-label="Искать"
+          >
             <svg class="arrow arrow_right">
               <use href="#icon-arrow" />
             </svg>
@@ -104,11 +108,107 @@
           </figure>
         </div>
       </section>
+
+      <section class="filter">
+        <h2 class="visually-hidden"></h2>
+        <div class="container filter__container">
+          <fieldset class="filter__group">
+            <input
+              class="filter__radio"
+              type="radio"
+              name="type"
+              value="flower"
+              id="flower"
+              checked
+            />
+            <label class="filter__label filter__label_flower" for="flower">Цветы</label>
+            <input
+              class="filter__radio"
+              type="radio"
+              name="type"
+              value="toys"
+              id="toys"
+              checked
+            />
+            <label class="filter__label filter__label_toys" for="toys">Игрушки</label>
+            <input
+              class="filter__radio"
+              type="radio"
+              name="type"
+              value="postcard"
+              id="postcard"
+              checked
+            />
+            <label class="filter__label filter__label_postcard" for="postcard">Открытки</label>
+          </fieldset>
+          <fieldset class="filter__group filter__group_choices">
+            <div class="filter__choices choices choices_price">
+              <button class="filter__select choices__btn">Цена</button>
+              <div class='choices__box choices__box_price'>
+                <fieldset class="filter__group filter__group_price">
+
+                  <input class='filter__input-price' type="text" placeholder="от" />
+                  <input class='filter__input-price' type="text" placeholder="до" />
+                </fieldset>
+              </div>
+            </div>
+            <div class="filter__type choices choices_type">
+              <button class="filter__select choices__btn">Тип товара</button>
+              <div class='choices__box choices__box_type'>
+                <ul class='filter__type-list'>
+                  <li class='filter__type-item'>
+                    <button class='filter__type-button'>Монобукеты</button>
+                  </li>
+                  <li class='filter__type-item'>
+                    <button class='filter__type-button'>Авторские букеты</button>
+                  </li>                  
+                  <li class='filter__type-item'>
+                    <button class='filter__type-button'>Цветы в коробке</button>
+                  </li>                  
+                  <li class='filter__type-item'>
+                    <button class='filter__type-button'>Цветы в корзине</button>
+                  </li>                  
+                  <li class='filter__type-item'>
+                    <button class='filter__type-button'>Букеты из сухоцветов</button>
+                  </li>
+                </ul>
+                </divс>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+
+      <section class="subscribe">
+        <div class="container">
+          <h2 class="subscribe__title">Подпишись на рассылку</h2>
+          <form class="subscribe__form form">
+            <input
+              class="form__input subscribe__input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
+            <button
+              class="form__button subscribe__button"
+              type="submit"
+              aria-label="Отправить"
+            >
+              <svg class="arrow arrow_top">
+                <use href="#icon-arrow" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer></footer>
   </body>
 
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    style="display: none"
+    aria-hidden="true"
+  >
     <symbol
       id="icon-arrow"
       viewBox="0 0 20 12"
@@ -142,7 +242,7 @@
     </symbol>
   </svg>
 
-  <svg width="0" height="0" style="position: absolute">
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
     <clipPath id="hero-clip-path" clipPathUnits="objectBoundingBox">
       <path
         d="M1,0.191 C1,0.235,0.961,0.275,0.896,0.307 C0.961,0.36,1,0.427,1,0.499 C1,0.572,0.96,0.639,0.893,0.692 C0.96,0.724,1,0.765,1,0.81 C1,0.915,0.776,1,0.5,1 C0.224,1,0,0.915,0,0.81 C0,0.765,0.04,0.724,0.107,0.692 C0.04,0.639,0,0.572,0,0.499 C0,0.427,0.039,0.36,0.104,0.307 C0.039,0.275,0,0.235,0,0.191 C0,0.086,0.224,0,0.5,0 C0.776,0,1,0.086,1,0.191"

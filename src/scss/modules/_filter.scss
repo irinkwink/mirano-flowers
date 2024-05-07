@@ -1,0 +1,134 @@
+.filter {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+
+    &_choices {
+      column-gap: 64px;
+    }
+
+    &_price {
+      column-gap: 8px;
+    }
+  }
+
+  &__radio {
+    appearance: none;
+    position: absolute;
+  }
+
+  &__label {
+    padding: 16px;
+    padding-left: 60px;
+    border-radius: 300px;
+    cursor: pointer;
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: left 16px center;
+
+    &_flower {
+      background-image: url("/img/flower.png");
+    }
+
+    &_toys {
+      background-image: url("/img/toys.png");
+    }
+
+    &_postcard {
+      background-image: url("/img/postcard.png");
+    }
+
+    @include hover {
+      color: var(--color-white);
+      background-color: var(--color-orange-light);
+    }
+  }
+
+  &__radio:focus-visible + &__label {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
+  }
+
+  &__radio:checked + &__label {
+    background-color: var(--color-orange-light);
+  }
+
+  &__input {
+  }
+
+  &__choices {
+  }
+
+  &__select {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    &::after {
+      @include flex-center;
+      @include square(8px);
+
+      content: "";
+      background-color: var(--color-dark);
+      clip-path: polygon(50% 10%, 0 90%, 100% 90%);
+    }
+
+    @include hover {
+      color: var(--color-orange);
+      &::after {
+        background-color: var(--color-orange);
+      }
+    }
+  }
+
+  &__price-group {
+  }
+
+  &__input-price {
+    padding: 8px 16px;
+    border-radius: 32px;
+    width: 110px;
+    border: none;
+    color: var(--color-dark);
+    background-color: var(--color-bg);
+    border: 1px solid transparent;
+
+    &::placeholder {
+      color: var(--color-dark);
+    }
+
+    &:focus,
+    &:focus-visible {
+      border: 1px solid var(--color-orange-light);
+      outline: none;
+    }
+
+    &:disabled {
+      background: var(--color-footer);
+    }
+  }
+
+  &__type-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__type-button {
+    white-space: nowrap;
+
+    @include hover {
+      color: var(--color-orange);
+    }
+  }
+}
