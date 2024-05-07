@@ -1,0 +1,51 @@
+.goods {
+  padding-block: 60px;
+
+  @include mobile {
+    padding-block: 40px;
+  }
+
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-green);
+
+    @include mobile {
+      font-size: 32px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @include mobile {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, fit-content(310px));
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 24px;
+
+    @include mobile {
+      grid-template-columns: repeat(2, fit-content(310px));
+    }
+
+    @include mobile-s {
+      column-gap: 12px;
+    }
+  }
+
+  &__item {
+  }
+
+  &__card {
+  }
+}

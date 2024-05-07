@@ -3,13 +3,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 30px;
+    column-gap: 180px;
+    row-gap: 32px;
+    flex-wrap: wrap;
   }
 
   &__group {
     display: flex;
     align-items: center;
-    column-gap: 12px;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    @include mobile-s {
+      gap: 8px;
+    }
 
     &_choices {
       column-gap: 64px;
